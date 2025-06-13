@@ -367,3 +367,21 @@ a {
     font-size: 1.8rem;
   }
 }
+
+/* Success Message Styles */
+.success-message {
+  background-color: var(--primary-light);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.success-message h3 {
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+.success-message p {
+  font-size: 1.1rem;
+}
