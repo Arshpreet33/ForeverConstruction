@@ -43,6 +43,7 @@ const Quote = () => {
             setSubmitted(true);
           }}
           className="quote-form"
+          netlify
         >
           {/* Netlify form recognition */}
           <input type="hidden" name="form-name" value="quote-request" />
