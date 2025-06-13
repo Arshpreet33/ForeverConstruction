@@ -3,7 +3,7 @@ import '../styles/global.css';
 
 const ImageGallery = () => {
   // Array of image filenames - now up to gallery24.jpg
-  const images = Array.from({ length: 24 }, (_, i) => `gallery${i + 1}.jpg`);
+  const images = Array.from({ length: 24 }, (_, i) => `${i + 1}.jpeg`);
   
   return (
     <div className="masonry-gallery">

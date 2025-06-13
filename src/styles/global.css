@@ -262,85 +262,7 @@ a {
 
 /* Gallery Page Styles */
 /* Gallery Page Styles */
-/* Gallery Page Styles */
-.masonry-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-auto-rows: 200px;
-  grid-gap: 1rem;
-  margin-top: 2rem;
-}
-
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-/* Special sizing for variety */
-.gallery-item.wide {
-  grid-column: span 2;
-}
-
-.gallery-item.tall {
-  grid-row: span 2;
-}
-
-.gallery-item.wide-tall {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.gallery-item:hover {
-  transform: scale(1.02);
-  z-index: 1;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.05);
-}
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .masonry-gallery {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    grid-auto-rows: 180px;
-  }
-}
-
-@media (max-width: 768px) {
-  .masonry-gallery {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-auto-rows: 160px;
-  }
-  
-  .gallery-item.wide,
-  .gallery-item.wide-tall {
-    grid-column: span 1;
-  }
-  
-  .gallery-item.tall,
-  .gallery-item.wide-tall {
-    grid-row: span 1;
-  }
-}
-
-@media (max-width: 480px) {
-  .masonry-gallery {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 250px;
-  }
-}
-/* .gallery-page {
+.gallery-page {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
@@ -408,32 +330,7 @@ a {
     grid-template-columns: 1fr;
     grid-auto-rows: 250px;
   }
-} */
-/* .gallery-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  text-align: center;
-}
-
-.masonry-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-auto-rows: 10px;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.gallery-item {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.gallery-item:hover {
-  transform: scale(1.02);
-} */
+} 
 
 /* Responsive Styles */
 @media (max-width: 768px) {
