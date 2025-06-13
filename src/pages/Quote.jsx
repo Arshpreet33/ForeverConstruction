@@ -38,8 +38,8 @@ const Quote = () => {
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          onSubmit={(e) => {
-            e.preventDefault();
+          onSubmit={() => {
+            // e.preventDefault();
             setSubmitted(true);
           }}
           className="quote-form"
