@@ -34,19 +34,19 @@ const Quote = () => {
         </div>
       ) : (
         <form
-          name="quote-request"
+          name="quote-request-form"
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           onSubmit={(e) => {
-            e.preventDefault();
+            // e.preventDefault();
             setSubmitted(true);
           }}
           className="quote-form"
           action="/success"
         >
           {/* Netlify form recognition */}
-          <input type="hidden" name="form-name" value="quote-request" />
+          <input type="hidden" name="form-name" value="quote-request-form" />
 
           {/* Honeypot field for spam protection */}
           <div hidden>
