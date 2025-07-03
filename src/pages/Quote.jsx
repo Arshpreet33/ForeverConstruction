@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import "../styles/global.css";
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
 const Quote = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -17,6 +23,18 @@ const Quote = () => {
       ...prev,
       [name]: value,
     }));
+  };
+
+  const handleSubmit = (e) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "quote-request-form", ...formData }),
+    })
+      .then(() => setSubmitted(true))
+      .catch((error) => console.log("Error", error));
+
+    e.preventDefault();
   };
 
   return (
@@ -38,10 +56,7 @@ const Quote = () => {
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          onSubmit={(e) => {
-            // e.preventDefault();
-            setSubmitted(true);
-          }}
+          onSubmit={handleSubmit}
           className="quote-form"
           action="/success"
         >
